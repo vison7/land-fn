@@ -410,35 +410,85 @@
 <section class="container-fluid home-section8">
 	<div class="row py-lg-5">
     <div class="col-lg-9 col-md-12 mx-auto">
-      <h5 class="mt-3">Name of the Project </h5>
+      <h5 class="mt-3"> </h5>
     </div>
 
-   
-		<div class="col-lg-9 col-md-12 mx-auto">
+    <div class="col-lg-9 col-md-12 mx-auto">
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Project Location</label>
+        <label for="exampleFormControlInput1" class="form-label">Name of the Project</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
       </div>
+
+    </div>
+
+		<div class="col-lg-9 col-md-12 mx-auto">
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Detail</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <h5 class="mt-3">Project Details</h5>
+      </div>
+      
+    </div>
+
+    <div class="col-lg-9 col-md-12 mx-auto">
+      <div class=row>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Project Location</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Date</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col-lg-9 col-md-12 mx-auto">
+      <div class=row>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Parties Involved</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">The Area</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9 col-md-12 mx-auto">
+      <div class=row>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">How much money</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Legal Status</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9 col-md-12 mx-auto">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">allegation of corruption</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+    </div>
+
+    <div class="col-lg-9 col-md-12 mx-auto">
         <div class=row>
-          <div class="col-lg-6 col-md-6">
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Impacts to Communities and Actions</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Lessons Learn</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </div>
 
           <div class="col-lg-12 col-md-12 mb-3 mx-auto text-center">
             <button type="button" class="btn btn-submit">PROJECT<br />INFORMATION</button>
