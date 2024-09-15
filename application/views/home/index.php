@@ -25,7 +25,7 @@
     </div>
 
       <div class=" col-lg-4 col-md-6">
-          <div class="card" style="">
+          <div class="card mb-5" style="">
             <div class="card-body">
               <h5 class="card-title">I’m looking to</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
@@ -35,8 +35,10 @@
             </div>
           </div>
       </div>
+      
       <div class=" col-lg-2 ">
       </div>
+
       <div class=" col-lg-4 col-md-6">
           <div class="card" style="">
             <div class="card-body">
@@ -73,7 +75,7 @@
     <h1 class="m-3">See the cases</h1>
     </div>
     <div class="col-lg-4 col-md-4">
-      <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
+      <div class="btn-group mt-3 mb-3" role="group" aria-label="Button group with nested dropdown">
         <div class="btn-group btn-group-sm" role="group">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Select Country
@@ -395,9 +397,8 @@
       Together, we can expose corruption in land acquisition cases. Reported cases will be processed by the team before being included in the reporting map. This may involve the sharing of information to trusted personnel including legal advisers and established community NGOs.
       </p>
 
-      <div class="col-lg-6 col-md-6 mx-auto">
+      <div class="col-lg-6 col-md-6 mb-3 mx-auto">
         <img src="/assets/images/login-fb.svg" class="img-fluid mt-5" alt="...">
-      
         <img src="/assets/images/login-gmail.svg" class="img-fluid mt-3" alt="...">
       </div>
 
@@ -439,7 +440,7 @@
             </div>
           </div>
 
-          <div class="col-lg-12 col-md-12 mx-auto text-center">
+          <div class="col-lg-12 col-md-12 mb-3 mx-auto text-center">
             <button type="button" class="btn btn-submit">PROJECT<br />INFORMATION</button>
           </div>
 
