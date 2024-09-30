@@ -172,27 +172,32 @@
       
 
       <div class="row row-cols-1 row-cols-md-4 g-4">
-
+      <?php
+      $i = 0;
+      foreach (@$cases->data as $row) {
+        $link = "#?" . $row->id;
+      ?>
         <div class="col">
           <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
+          <img src="<?php echo $row->thumb ?>" alt="" class="cards-image">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
               role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
               <title>Placeholder</title>
               <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
                 dy=".3em">Image cap</text>
-            </svg>
+            </svg> -->
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title"><?php echo $row->title ?></h5>
+              <!-- <p class="card-text"></p> -->
             </div>
-            <div class="card-footer">
+            <!-- <div class="card-footer">
               <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
+            </div> -->
           </div>
         </div>
+        <?php }?>
 
-        <div class="col">
+        <!-- <div class="col">
           <div class="card h-100">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
               role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -322,7 +327,7 @@
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </div>
           </div>
-        </div>
+        </div> -->
         
       </div>
 
