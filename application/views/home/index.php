@@ -75,7 +75,7 @@
     <h1 class="m-3">See the cases</h1>
     </div>
     <div class="col-lg-4 col-md-4">
-      <div class="btn-group mt-3 mb-3" role="group" aria-label="Button group with nested dropdown">
+      <!-- <div class="btn-group mt-3 mb-3" role="group" aria-label="Button group with nested dropdown">
         <div class="btn-group btn-group-sm" role="group">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Select Country
@@ -85,14 +85,18 @@
             <li><a class="dropdown-item" href="#">Indonesia</a></li>
           </ul>
         </div>
-      </div>  
+      </div>   -->
     </div>
 
 		<div class="col-lg-9 col-md-12 mx-auto">
-			<iframe
+    <iframe src="https://www.google.com/maps/d/embed?mid=1OhCME-Vgp47gXg9qH42Wokpw0XpkgXw&ehbc=2E312F" width="100%" height="650"></iframe>
+
+			
+
+			<!-- <iframe
 				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15501.140214817335!2d100.6985162!3d13.76167585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sth!4v1725887797315!5m2!1sen!2sth"
 				width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
+				referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 		</div>
 	</div>
 </section>
@@ -584,3 +588,4 @@
 
 	</div>
 </section>
+
