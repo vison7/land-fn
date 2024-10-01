@@ -25,8 +25,8 @@
     </div>
 
       <div class=" col-lg-4 col-md-6">
-          <div class="card mb-5" style="">
-            <div class="card-body">
+          <div class="card mb-5" style="cursor: pointer;">
+            <div class="card-body" onclick="location.href='#submit-a-case';">
               <h5 class="card-title">I’m looking to</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">submit <br />a case</p>
@@ -40,8 +40,8 @@
       </div>
 
       <div class=" col-lg-4 col-md-6">
-          <div class="card" style="">
-            <div class="card-body">
+          <div class="card" style="cursor: pointer;">
+            <div class="card-body" onclick="location.href='#case-studies';">
               <h5 class="card-title">I’m looking to</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">data & information</p>
@@ -72,7 +72,7 @@
     <div class="col-lg-4 col-md-4 ">
     </div>
     <div class="col-lg-4 col-md-4 ">
-    <h1 class="m-3">See the cases</h1>
+    <h1 class="mt-5 mb-5">See the cases</h1>
     </div>
     <div class="col-lg-4 col-md-4">
       <!-- <div class="btn-group mt-3 mb-3" role="group" aria-label="Button group with nested dropdown">
@@ -90,258 +90,156 @@
 
 		<div class="col-lg-9 col-md-12 mx-auto">
     <iframe src="https://www.google.com/maps/d/embed?mid=1OhCME-Vgp47gXg9qH42Wokpw0XpkgXw&ehbc=2E312F" width="100%" height="650"></iframe>
-
-			
-
-			<!-- <iframe
-				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15501.140214817335!2d100.6985162!3d13.76167585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sth!4v1725887797315!5m2!1sen!2sth"
-				width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+		
 		</div>
 	</div>
 </section>
 
-<!-- <section class="container-fluid home-section4 ">
-	<div class="row py-lg-5">
-    <h1 class="m-3 text-center ">Know Your Rights: FAQ</h1>
-		<div class="col-lg-9 col-md-12 mx-auto" >
-      
-      <div class="position-relative" style="border:1px solid red; min-height:500px;width:;100%">
-      
 
-        <div class="mycard card position-absolute top-0 start-0">
-          <div class="card-body">
-           1 This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="mycard card position-absolute bottom-0 start-0">
-          <div class="card-body">
-           2 This is some text within a card body.
-          </div>
-        </div>
-        <div class="mycard card position-absolute top-50 translate-middle-y" >
-          <div class="card-body">
-           2.5 This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="mycard card position-absolute top-0 start-50 translate-middle-x">
-          <div class="card-body">
-           3 This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="mycard card position-absolute bottom-0 start-50 translate-middle-x">
-          <div class="card-body">
-           4 This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="mycard card position-absolute top-0 end-0">
-          <div class="card-body">
-           5 This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="mycard card position-absolute bottom-0 end-0">
-          <div class="card-body">
-           6 This is some text within a card body.
-          </div>
-        </div>
-
-      </div>
-    
-		</div>
-
-	</div>
-</section> -->
 
 <section class="container-fluid home-section4 ">
 	<div class="row py-lg-5">
-  <div class="col-lg-9 col-md-12 mx-auto" >
-  <img src="/assets/images/4.svg" class="img-fluid" />
-  </div>
-	</div>
-</section>
+		<h1 class="text-center mt-5 mb-5">KNOW YOUR RIGHTS: FAQ</h1>
 
-<section class=" container-fluid home-section5 ">
-	<div class="row py-lg-5">
-    <h1 class="text-center m-3">Case Studies</h1>
 		<div class="col-lg-9 col-md-12 mx-auto">
-      
 
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-      <?php
-      $i = 0;
-      foreach (@$cases->data as $row) {
-        $link = "#?" . $row->id;
-      ?>
-        <div class="col">
-          <div class="card h-100">
-          <img src="<?php echo $row->thumb ?>" alt="" class="cards-image">
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg> -->
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $row->title ?></h5>
-              <!-- <p class="card-text"></p> -->
-            </div>
-            <!-- <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div> -->
-          </div>
-        </div>
-        <?php }?>
+			<div class="masonry-grid">
 
-        <!-- <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
+				<div class="grid-sizer"></div>
 
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
+        <?php
+				if(isset($faq->data)){
+          $i=0;
+				foreach (@$faq->data as $row) {
+          $i++;
+					$link = "#?" . $row->id;
+				?>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+            <?php if($i==3){?>
+              <img src="/assets/images/green.jpg" />
+              <div class="grid-my-item-box-desc-2 d-none d-sm-none d-xl-block d-lg-block">
+                <?php echo $row->title?>
+                <br />
+                <small class=""><?php echo substr($row->description,0,80)?></small>
+              </div>
+            <?php }else{?>
+              <img src="<?php echo $row->thumb?>" />
+              <div class="grid-my-item-box-desc d-none d-sm-none d-xl-block d-lg-block">
+                <span><?php echo $row->title?></span>
+              </div>
+            <?php }?>
 
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
           </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">Image cap</text>
-            </svg>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div> -->
-        
-      </div>
+				</div>
+        <?php }}?>
 
-      <p class="seeall text-center m-3">
-        <a href="#">see all</a>
-      </p>
+				<!-- <div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="/assets/images/green.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Rempang Ecocity Development Project</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Concession of PT Duta Palma Group</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
+							Province</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
+							Province</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">Concession of PT Duta Palma Group</div>
+					</div>
+				</div>
+				<div class="grid-my-item">
+					<div class="grid-my-item-box">
+						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
+							Province</div>
+					</div>
+				</div> -->
 
+			</div>
 
-    </div>
+		</div>
 	</div>
 </section>
 
 
-<section class="container-fluid home-section6 ">
+<section id="case-studies" class=" container-fluid home-section5 ">
+	<div class="row py-lg-5">
+		<h1 class="text-center mt-5 mb-5">Case Studies</h1>
+		<div class="col-lg-9 col-md-12 mx-auto">
+
+			<div class="row row-cols-1 row-cols-md-4 g-4">
+				<?php
+				$i = 0;
+				foreach (@$cases->data as $row) {
+					$link = "#?" . $row->id;
+				?>
+				<div class="col">
+					<div class="card h-100">
+						<img src="<?php echo $row->thumb ?>" alt="" class="card-img-top">
+						<div class="card-body">
+							<h5 class="card-title">
+								<?php echo $row->title ?>
+							</h5>
+						</div>
+					</div>
+				</div>
+				<?php }?>
+
+			</div>
+
+			<p class="seeall text-center m-3">
+				<a href="#">see all</a>
+			</p>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="container-fluid home-section6 ">
 	<div class="row py-lg-5">
     <h1 class="text-center mt-3 mb-5">Get Involved & Support</h1>
 
@@ -395,11 +293,11 @@
 
 		
 	</div>
-</section>
+</section> -->
 
-<section class="container-fluid home-section7 ">
+<section id="submit-a-case" class="container-fluid home-section6 ">
 	<div class="row py-lg-5">
-    <h1 class="text-center m-3">SUBMIT A CASE</h1>
+    <h1 class="text-center mt-5 mb-5">SUBMIT A CASE</h1>
 
 		<div class="col-lg-6 col-md-12 mx-auto">
       <p class="text-center">

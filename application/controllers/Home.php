@@ -7,9 +7,12 @@ class Home extends CI_Controller
     public function index()
     {
         $this->load->model('content_model');
-        $params = array('content_type' => '1',  'page_size' => 15);
+        $params = array('content_type' => '1',  'page_size' => 8);
         $data['cases'] = $this->content_model->get_content($params);
 
+        $this->load->model('content_model');
+        $params = array('content_type' => '2',  'page_size' => 10);
+        $data['faq'] = $this->content_model->get_content($params);
 
         // $params = array('cate_id' => '1','page_size' => 6);
         // $data['temple1'] = $this->content_model->get_temple($params);
