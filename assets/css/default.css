@@ -34,6 +34,10 @@ body {
   font-family: "Anton", sans-serif;
 }
 
+.top-nav{
+  background-color: #caba9c;
+}
+
 /* Section 1 */
 .home-section1 {
   background-color: #caba9c;
@@ -190,4 +194,10 @@ body {
 .home-section9 .txt-partners {
   font-family: "Luciole";
   font-size: 20px;
+}
+
+/* cases */
+.cases-detail{
+  font-family: "Luciole";
+  font-size: 16px;
 }

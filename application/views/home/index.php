@@ -214,12 +214,14 @@
 				<?php
 				$i = 0;
 				foreach (@$cases->data as $row) {
-					$link = "#?" . $row->id;
+					$link = "/cases/detail/" . $row->id;
 				?>
 				<div class="col">
 					<div class="card h-100">
+            <a href="<?php echo $link?>">
 						<img src="<?php echo $row->thumb ?>" alt="" class="card-img-top">
-						<div class="card-body">
+            </a>
+						<div class="card-body" style="cursor:pointer;" onclick="location.href='/cases/detail/<?php echo $row->id ?>';">
 							<h5 class="card-title">
 								<?php echo $row->title ?>
 							</h5>
@@ -231,7 +233,7 @@
 			</div>
 
 			<p class="seeall text-center m-3">
-				<a href="#">see all</a>
+				<a href="/cases">see all</a>
 			</p>
 
 		</div>

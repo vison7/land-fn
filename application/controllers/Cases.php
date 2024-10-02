@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Media extends CI_Controller
+class Cases extends CI_Controller
 {
 
     public function __construct()
@@ -13,50 +13,18 @@ class Media extends CI_Controller
 
     public function index()
     {
-        // $params = array('content_type' => '1', 'temple_id' => '0', 'page_size' => 5);
-        // $data['banner'] = $this->content_model->get_banner($params);
+        $params = array('content_type' => '1', 'page_size' => 20, 'page_no' => 1);
+        $data['cases'] = $this->content_model->get_content($params);
 
-        // $params = array('cate_id' => '1','page_size' => 6);
-        // $data['temple1'] = $this->content_model->get_temple($params);
-
-        // $params = array('cate_id' => '2','page_size' => 6,'page_no'=>1);
-        // $data['temple2'] = $this->content_model->get_temple($params);
-
-        // $params = array('cate_id' => '3','page_size' => 6,'page_no'=>1);
-        // $data['temple3'] = $this->content_model->get_temple($params);
-
-        // $params = array('content_type' => '2','page_size' => 6,'page_no'=>1);
-        // $data['volunteer'] = $this->content_model->about_volunteer($params);
-
-        // Slide
-        $params = array('content_type' => '0', 'cate_id' => '4', 'page_size' => 5);
-        $data['banner'] = $this->content_model->get_banner($params);
-
-
-        $recommend = (isset($_REQUEST['recommend'])) ? $_REQUEST['recommend'] : '';
-        $hit = (isset($_REQUEST['hit'])) ? $_REQUEST['hit'] : '';
-
-        // video
-        $params_video = array('content_type' => '1', 'cate_id' => '1', 'recommend' => $recommend, 'hit' => $hit, 'page_size' => 4, 'page_no' => 1);
-        // video
-        $params_ebook = array('content_type' => '7', 'cate_id' => '',  'page_size' => 4, 'page_no' => 1);
-        // video
-        $params_photo = array('content_type' => '5', 'cate_id' => '',  'recommend' => $recommend, 'hit' => $hit, 'page_size' => 4, 'page_no' => 1);
-        // video
-        $params_sound = array('content_type' => '6', 'cate_id' => '', 'recommend' => $recommend, 'hit' => $hit, 'page_size' => 4, 'page_no' => 1);
-        // article
-        $params_article = array('content_type' => '11', 'cate_id' => '', 'recommend' => $recommend, 'hit' => $hit, 'page_size' => 4, 'page_no' => 1);
-
-        $data['video'] = $this->content_model->get_content($params_video);
-        $data['ebook'] = $this->content_model->get_content($params_ebook);
-        $data['photo'] = $this->content_model->get_content($params_photo);
-        $data['sound'] = $this->content_model->get_content($params_sound);
-        $data['article'] = $this->content_model->get_content($params_article);
+        // $data['ebook'] = $this->content_model->get_content($params_ebook);
+        // $data['photo'] = $this->content_model->get_content($params_photo);
+        // $data['sound'] = $this->content_model->get_content($params_sound);
+        // $data['article'] = $this->content_model->get_content($params_article);
 
         // print_r($data['article']);
 
         $this->load->view('layouts/header');
-        $this->load->view('media/index', $data);
+        $this->load->view('cases/index', $data);
         $this->load->view('layouts/footer');
     }
 
@@ -85,13 +53,13 @@ class Media extends CI_Controller
 
         $this->load->view('media/list_article', $data);
     }
-    public function article_detail($id)
+    public function detail($id)
     {
         $params = array('id' => $id);
         $data['data'] = $this->content_model->get_detail($params);
 
         $this->load->view('layouts/header');
-        $this->load->view('media/article_detail', $data);
+        $this->load->view('cases/detail', $data);
         $this->load->view('layouts/footer');
     }
 
