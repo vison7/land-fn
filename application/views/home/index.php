@@ -488,7 +488,13 @@
     <div class="col-lg-8 col-md-12 mx-auto">
 			<h6 class="text-end txt-partners">our partners</h6>
       <div class="text-end">
-      Icon
+        <?php for($i=1;$i<8;$i++){?>
+        <img src="/assets/images/partners/<?php echo $i?>.png" width="80" alt="" class="ml-5">
+        <?php }?>
+        <br />
+        <?php for($i=8;$i<=11;$i++){?>
+        <img src="/assets/images/partners/<?php echo $i?>.png" width="110" alt="">
+        <?php }?>
       </div>
 		</div>
 
