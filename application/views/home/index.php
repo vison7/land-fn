@@ -112,10 +112,10 @@
           $i=0;
 				foreach (@$faq->data as $row) {
           $i++;
-					$link = "#?" . $row->id;
+					$link = "/faq/detail/" . $row->id;
 				?>
 				<div class="grid-my-item">
-					<div class="grid-my-item-box">
+					<div class="grid-my-item-box" style="cursor:pointer;" onclick="location.href='/faq/detail/<?php echo $row->id ?>';">
             <?php if($i==3){?>
               <img src="/assets/images/green.jpg" />
               <div class="grid-my-item-box-desc-2 d-none d-sm-none d-xl-block d-lg-block">
@@ -220,11 +220,13 @@
 					<div class="card h-100">
             <a href="<?php echo $link?>">
 						<img src="<?php echo $row->thumb ?>" alt="" class="card-img-top">
+            
             </a>
 						<div class="card-body" style="cursor:pointer;" onclick="location.href='/cases/detail/<?php echo $row->id ?>';">
 							<h5 class="card-title">
 								<?php echo $row->title ?>
 							</h5>
+              <p class="card-text"><small class="text-body-secondary"><?php echo @COUNTRY_FLAG[$row->cate_id] ?></small></p>
 						</div>
 					</div>
 				</div>
