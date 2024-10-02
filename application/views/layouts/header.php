@@ -61,11 +61,17 @@
           left: 5px;
           top:30%;
           background-color: #ccc;
-          opacity:0.6;
+          opacity:0.9;
           border-radius: 10px;
           font-family: "Luciole";
-          /* color:#fff; */
+          color:#fff;
+          padding-top:10px;
+          padding-bottom:10px;
         }
+        /* .grid-my-item-box-desc span{
+          opacity:1 !important;
+          color:#fff;
+        } */
 
         .grid-my-item-box-desc-2{
           position:absolute;
