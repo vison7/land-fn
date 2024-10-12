@@ -27,7 +27,7 @@
       <div class=" col-lg-4 col-md-6">
           <div class="card mb-5" style="cursor: pointer;">
             <div class="card-body" onclick="location.href='#submit-a-case';">
-              <h5 class="card-title">I’m looking to</h5>
+              <h5 class="card-title">I’m looking for</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">submit <br />a case</p>
               <!-- <a href="#" class="card-link">Card link</a> -->
@@ -42,7 +42,7 @@
       <div class=" col-lg-4 col-md-6">
           <div class="card" style="cursor: pointer;">
             <div class="card-body" onclick="location.href='#case-studies';">
-              <h5 class="card-title">I’m looking to</h5>
+              <h5 class="card-title">I’m looking for</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">data & information</p>
               <!-- <a href="#" class="card-link">Card link</a> -->
@@ -52,9 +52,7 @@
       </div>
       <div class=" col-lg-1 ">
       </div>
-
   </div>
-
   <h6 class="mt-5 mb-3"><a href="#">I want to learn more about this.</a></h6>
 </section>
 
@@ -90,12 +88,9 @@
 
 		<div class="col-lg-9 col-md-12 mx-auto">
     <iframe src="https://www.google.com/maps/d/embed?mid=1OhCME-Vgp47gXg9qH42Wokpw0XpkgXw&ehbc=2E312F" width="100%" height="650"></iframe>
-		
 		</div>
 	</div>
 </section>
-
-
 
 <section class="container-fluid home-section4 ">
 	<div class="row py-lg-5">
@@ -113,6 +108,7 @@
 				foreach (@$faq->data as $row) {
           $i++;
 					$link = "/faq/detail/" . $row->id;
+          $thumb = str_replace('//land-bn/','//localhost:8011/',$row->thumb);
 				?>
 				<div class="grid-my-item">
 					<div class="grid-my-item-box" style="cursor:pointer;" onclick="location.href='/faq/detail/<?php echo $row->id ?>';">
@@ -124,7 +120,7 @@
                 <small class=""><?php echo substr($row->description,0,80)?></small>
               </div>
             <?php }else{?>
-              <img src="<?php echo $row->thumb?>" />
+              <img src="<?php echo $thumb?>" />
               <div class="grid-my-item-box-desc d-none d-sm-none d-xl-block d-lg-block">
                 <span><?php echo $row->title?></span>
               </div>
@@ -132,78 +128,13 @@
 
           </div>
 				</div>
-        <?php }}?>
-
-				<!-- <div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="/assets/images/green.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Land Bridge Thailand Project</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Rempang Ecocity Development Project</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Concession of PT Duta Palma Group</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
-							Province</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
-							Province</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">Concession of PT Duta Palma Group</div>
-					</div>
-				</div>
-				<div class="grid-my-item">
-					<div class="grid-my-item-box">
-						<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
-						<div class="grid-my-item-box-desc d-sm-none d-none">The coast of Pak Bang Sub-district, Thepha District, Songkhla
-							Province</div>
-					</div>
-				</div> -->
+        <?php }}?>			
 
 			</div>
 
 		</div>
 	</div>
 </section>
-
 
 <section id="case-studies" class=" container-fluid home-section5 ">
 	<div class="row py-lg-5">
@@ -215,11 +146,12 @@
 				$i = 0;
 				foreach (@$cases->data as $row) {
 					$link = "/cases/detail/" . $row->id;
+          $thumb = str_replace('//land-bn/','//localhost:8011/',$row->thumb);
 				?>
 				<div class="col">
 					<div class="card h-100">
             <a href="<?php echo $link?>">
-						<img src="<?php echo $row->thumb ?>" alt="" class="card-img-top">
+						<img src="<?php echo $thumb ?>" alt="" class="card-img-top">
             
             </a>
 						<div class="card-body" style="cursor:pointer;" onclick="location.href='/cases/detail/<?php echo $row->id ?>';">
@@ -242,64 +174,7 @@
 	</div>
 </section>
 
-
-<!-- <section class="container-fluid home-section6 ">
-	<div class="row py-lg-5">
-    <h1 class="text-center mt-3 mb-5">Get Involved & Support</h1>
-
-    <div class="col-lg-3 col-md-12">
-      </div>
-
-    <div class="col-lg-3 col-md-12 mt-5">
-      <div class="btn-group " role="group" aria-label="Button group with nested dropdown">
-        <div class="btn-group" role="group">
-          <button type="button" class="btn dropdown-toggle mybtn" data-bs-toggle="dropdown" aria-expanded="false">
-            THAILAND
-          </button>
-          <ul class="dropdown-menu" style="">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-12 mt-5 text-end">
-      <div class="btn-group my-btn-group" role="group" aria-label="Button group with nested dropdown">
-        <div class="btn-group my-btn-group" role="group">
-          <button type="button" class="btn dropdown-toggle mybtn" data-bs-toggle="dropdown" aria-expanded="false">
-          INDONESIA
-          </button>
-          <ul class="dropdown-menu" style="">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          </ul>
-        </div>
-      </div>  
-    </div>
-
-    <div class="col-lg-3 col-md-12">
-    </div>
-
-    <div class="col-lg-12 col-md-12 mt-5 mb-5 text-center">
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <div class="btn-group" role="group">
-          <button type="button" class="btn dropdown-toggle mybtn" data-bs-toggle="dropdown" aria-expanded="false">
-          OTHER
-          </button>
-          <ul class="dropdown-menu" style="">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-		
-	</div>
-</section> -->
-
-<section id="submit-a-case" class="container-fluid home-section6 ">
+<section id="submit-a-case" class="container-fluid home-section6">
 	<div class="row py-lg-5">
     <h1 class="text-center mt-5 mb-5">SUBMIT A CASE</h1>
 
@@ -309,25 +184,36 @@
       </p>
 
       <div class="col-lg-6 col-md-6 mb-3 mx-auto">
-        <img src="/assets/images/login-fb.svg" class="img-fluid mt-5" alt="...">
-        <img src="/assets/images/login-gmail.svg" class="img-fluid mt-3" alt="...">
+        <a href="javascript:fb_login();"><img src="/assets/images/login-fb.svg" class="img-fluid mt-5" alt="Facebook connect"></a>
+        <a href="javascript:gmail_login();"><img src="/assets/images/login-gmail.svg" class="img-fluid mt-3" alt="Gmail connect"></a>
       </div>
-
     </div>
 
 	</div>
 </section>
 
-<section class="container-fluid home-section8">
+<section id="submit-a-case-form" class="container-fluid home-section8" style="display:none">
+
 	<div class="row py-lg-5">
     <div class="col-lg-9 col-md-12 mx-auto">
-      <h5 class="mt-3"> </h5>
+      <h1 class="text-center mt-5 mb-5">SUBMIT A CASE</h1>
     </div>
 
     <div class="col-lg-9 col-md-12 mx-auto">
       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hi, <span id="login-name"></span> <a href="javascript:logout();" style="margin-left:20px;color:#fff;text-decoration: none;">( Logout )</a></label>
+      </div>
+    </div>
+
+    <form id="frm-case" action="#" enctype="multipart/form-data" method="POST" onsubmit="return submitForm();">
+    <input type="hidden" id="contact_name" name="contact_name" value="" />
+    <input type="hidden" id="contact_email" name="contact_email" value="" />
+    <input type="hidden" id="contact_org" name="contact_org" value="" />
+
+    <div class="col-lg-9 col-md-12 mx-auto">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Name of the Project</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <input type="text" class="form-control" id="title" name="title" placeholder="">
       </div>
 
     </div>
@@ -344,13 +230,13 @@
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Project Location</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="location" name="location" placeholder="" >
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Date</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="event_date" name="event_date" value="" placeholder="">
           </div>
         </div>
       </div>
@@ -361,13 +247,13 @@
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Parties Involved</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="parties_involved" name="parties_involved" placeholder="">
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">The Area</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="the_area" name="the_area" placeholder="">
           </div>
         </div>
       </div>
@@ -378,13 +264,13 @@
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">How much money</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="how_much_money" name="how_much_money" placeholder="">
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Legal Status</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="legal_status" name="legal_status" placeholder="">
           </div>
         </div>
       </div>
@@ -393,7 +279,17 @@
     <div class="col-lg-9 col-md-12 mx-auto">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">allegation of corruption</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="corruption" name="corruption" rows="3"></textarea>
+      </div>
+
+    </div>
+
+    <div class="col-lg-9 col-md-12 mx-auto">
+      <div class="mb-3">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Upload</label>
+          <input type="file" class="form-control" id="thumb" name="thumb" required>
+        </div>
       </div>
 
     </div>
@@ -402,17 +298,17 @@
         <div class=row>
 
           <div class="col-lg-12 col-md-12 mb-3 mx-auto text-center">
-            <button type="button" class="btn btn-submit">PROJECT<br />INFORMATION</button>
+            <button type="submit" class="btn btn-submit">Submit a case</button>
           </div>
-
         </div>
       
     </div>
 
+    </form>
 
 	</div>
-</section>
 
+</section>
 
 <section class="container-fluid home-section9">
 	<div class="row py-lg-5">
@@ -498,7 +394,5 @@
       </div>
 		</div>
 
-
 	</div>
 </section>
-

@@ -34,7 +34,7 @@ body {
   font-family: "Anton", sans-serif;
 }
 
-.top-nav{
+.top-nav {
   background-color: #caba9c;
 }
 
@@ -86,11 +86,10 @@ body {
   color: #174032;
   text-transform: uppercase;
 }
-.home-section4 .mycard{
-    height: 200px;
-    width: 200px;
+.home-section4 .mycard {
+  height: 200px;
+  width: 200px;
 }
-
 
 /* Section 5 */
 .home-section5 {
@@ -158,10 +157,10 @@ body {
   color: #fff;
 }
 .home-section8 .btn-submit {
-    background-color: #8a6240;
-    color: #fff;
-    font-size: 17.5px;
-    padding:10px 40px;
+  background-color: #8a6240;
+  color: #fff;
+  font-size: 17.5px;
+  padding: 10px 40px;
 }
 
 /* Section 9 */
@@ -197,7 +196,90 @@ body {
 }
 
 /* cases */
-.cases-detail{
+.cases-detail {
   font-family: "Luciole";
   font-size: 16px;
+}
+
+/* ---- grid ---- */
+
+.masonry-grid {
+  /* background: #DDD; */
+}
+
+/* clear fix */
+.masonry-grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-my-item {
+  width: 25%;
+}
+
+.grid-my-item {
+  float: left;
+}
+
+.grid-my-item img {
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+}
+.grid-my-item-box {
+  margin: 5px;
+  position: relative;
+  transition: transform 0.2s;
+}
+.grid-my-item-box:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  z-index: 1000;
+}
+.grid-my-item-box-desc {
+  position: absolute;
+  text-align: center;
+  width: 95%;
+  padding: 5px;
+  left: 5px;
+  top: 30%;
+  background-color: #ccc;
+  opacity: 0.9;
+  border-radius: 10px;
+  font-family: "Luciole";
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* .grid-my-item-box-desc span{
+  opacity:1 !important;
+  color:#fff;
+} */
+
+.grid-my-item-box-desc-2 {
+  position: absolute;
+  text-align: center;
+  width: 95%;
+  padding: 5px;
+  left: 5px;
+  top: 30%;
+  /* background-color: #ccc;
+  opacity:0.6; */
+  border-radius: 10px;
+  font-family: "Luciole";
+  color: #fff;
+}
+
+.grid-item--height2 {
+  height: 200px;
+}
+.grid-item--height3 {
+  height: 260px;
+}
+.grid-item--height4 {
+  height: 360px;
 }

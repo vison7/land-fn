@@ -20,32 +20,7 @@ class Content_model extends CI_Model
         $data = $this->feed_data('content/detail', $params);
         return json_decode($data);
     }
-    public function get_temple($params)
-    {
-        $data = $this->feed_data('content/temple', $params);
-        return json_decode($data);
-    }
-    public function get_templedetail($params)
-    {
-        $data = $this->feed_data('content/templedetail', $params);
-        return json_decode($data);
-    }
-    public function get_banner($params = array())
-    {
-        $data = $this->feed_data('content/banner', $params);
-        return json_decode($data);
-    }
-
-    public function get_watdetail($params = array())
-    {
-        $data = $this->feed_data('content/watdetail', $params);
-        return json_decode($data);
-    }
-    public function get_watdetail_all($params = array())
-    {
-        $data = $this->feed_data('content/watdetailall', $params);
-        return json_decode($data);
-    }
+    
     
     // member
     public function register($params = array())
@@ -97,62 +72,14 @@ class Content_model extends CI_Model
         return json_decode($data);
     }
 
-    // volunteer
-    public function volunteer($params = array())
+
+    // Cases
+    public function cases($params = array())
     {
-        $data = $this->feed_data('volunteer/register', $params , 'POST');
-        return json_decode($data);
-    }
-    public function volunteerall($params = array())
-    {
-        $data = $this->feed_data('volunteer/register', $params , 'GET');
-        return json_decode($data);
-    }
-    public function volunteercheck($params = array())
-    {
-        $data = $this->feed_data('volunteer/check', $params , 'GET');
+        $data = $this->feed_data('content/submitcase', $params , 'POST');
         return json_decode($data);
     }
 
-    public function volunteerskills($params = array())
-    {
-        $data = $this->feed_data('volunteer/registerSkills', $params , 'POST');
-        //print_r( $data);
-        return json_decode($data);
-    }
-    public function volunteerwat($params = array())
-    {
-        $data = $this->feed_data('volunteer/registerwat', $params , 'POST');
-        //print_r( $data);
-        return json_decode($data);
-    }
-
-    public function volunteerSubscription($params = array())
-    {
-        $data = $this->feed_data('volunteer/registersub', $params , 'POST');
-        print_r( $data);
-        return json_decode($data);
-    }
-
-
-    // about
-    public function about($params = array())
-    {
-        $data = $this->feed_data('contact/register', $params , 'POST');
-        return json_decode($data);
-    }
-
-    public function about_volunteer($params = array())
-    {
-        $data = $this->feed_data('volunteer/volunteerall', $params );
-        return json_decode($data);
-    }
-    public function about_volunteer_detail($params = array())
-    {
-        $data = $this->feed_data('volunteer/volunteeralldetail', $params );
-        //print_r($data);
-        return json_decode($data);
-    }
 
     // core feed
     private function feed_data($api_path, $params, $method = 'GET')

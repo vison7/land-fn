@@ -9,11 +9,23 @@
 		columnWidth: 100
 	});
 
-	// element argument can be a selector string
 	//   for an individual element
 	var msnry = new Masonry('.masonry-grid', {
 		// options
 	});
+
+	var API_URL_SUBMIT_CASE = '<?php echo API_URL_SUBMIT_CASE?>';
+	var API_TOKEN = '<?php echo API_TOKEN?>';
 </script>
+
+<script async  crossorigin="anonymous" src="/assets/js/auth.js?r=<?php echo time();?>"></script>
+<script async  crossorigin="anonymous" src="/assets/js/common.js?r=<?php echo time();?>"></script>
+<script async defer crossorigin="anonymous" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Load the JS SDK asynchronously -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async defer crossorigin="anonymous" src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+<script src="https://accounts.google.com/gsi/client" async></script>
+
 </body>
 </html>

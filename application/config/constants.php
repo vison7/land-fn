@@ -87,8 +87,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 // APIs config
 // define('API_URL', 'land-bn/api/');
 define('API_URL', 'https://bn.landdefender.org/api/');
-
+define('API_URL_SUBMIT_CASE', 'https://bn.landdefender.org/api/content/submitcase');
 define('API_TOKEN', '1234');
+
 const KNOWLEDGE_CATE = [
   '1'=>'การออกแบบวัด',
   '2'=>'การออกแบบกิจกรรม',
