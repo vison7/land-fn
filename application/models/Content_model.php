@@ -20,7 +20,11 @@ class Content_model extends CI_Model
         $data = $this->feed_data('content/detail', $params);
         return json_decode($data);
     }
-    
+    public function get_banner($params = array())
+    {
+        $data = $this->feed_data('content/banner', $params);
+        return json_decode($data);
+    }
     
     // member
     public function register($params = array())

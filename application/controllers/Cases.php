@@ -13,15 +13,8 @@ class Cases extends CI_Controller
 
     public function index()
     {
-        $params = array('content_type' => '1', 'page_size' => 20, 'page_no' => 1);
+        $params = array('content_type' => '1', 'page_size' => 40, 'page_no' => 1 , 'is_status'=>'approved');
         $data['cases'] = $this->content_model->get_content($params);
-
-        // $data['ebook'] = $this->content_model->get_content($params_ebook);
-        // $data['photo'] = $this->content_model->get_content($params_photo);
-        // $data['sound'] = $this->content_model->get_content($params_sound);
-        // $data['article'] = $this->content_model->get_content($params_article);
-
-        // print_r($data['article']);
 
         $this->load->view('layouts/header');
         $this->load->view('cases/index', $data);
@@ -38,24 +31,11 @@ class Cases extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
-
     public function submit()
     {
         $params = $_POST;
         $params['content_type'] = '1';
-
-        // $data = array('code'=>200,'data'=> $_POST);
-        // unset($params['confirm_password']);
-        // unset($params['agree']);
-        // print_r($params);
-        // exit();
-
-
         $res = $this->content_model->cases($params);
-        // if ($res->code == 200) {
-        //     $data = 
-        // }
-        // echo $res;
 
         header('Content-type: text/json');
         header('Content-type: application/json');
@@ -69,7 +49,5 @@ class Cases extends CI_Controller
         header('Content-type: application/json');
         echo json_encode($res);
     }
-    
-
 
 }

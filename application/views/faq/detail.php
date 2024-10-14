@@ -11,7 +11,6 @@
 	</div>
 </nav>
 
-
 <section id="case-studies" class=" container-fluid home-section55">
 	<div class="row py-lg-5">
 		<h1 class="text-center mt-5 mb-5">FAQ</h1>
@@ -20,15 +19,24 @@
 			
 				<h2 class="mt-5 mb-5"><?php echo @$data->data[0]->title?></h2>
 				
-				
 				<h5>Detail:</h5>
 				<p><?php echo @$data->data[0]->detail?></p>
-
 				
-			<!-- <p class="seeall text-center m-3">
-				<a href="#">see all</a>
-			</p> -->
-
+				<?php if(!empty($data->data[0]->gallery)){?>
+				<div class="container mt-5">
+					<div class="row">
+						<?php 
+						foreach ($data->data[0]->gallery as $val) { 
+							$link = str_replace('//land-bn/','//localhost:8011/',$val);
+							$thumb= str_replace('//land-bn/','//localhost:8011/',$val);
+							?>
+						<div class="col">
+							<a href="<?php echo $link?>" target="_blank"><img class="img-fluid" src="<?php echo $thumb  ?>" /></a>
+						</div>
+						<?php } ?>
+					</div>
+				</div>
+				<?php } ?>
 		</div>
 	</div>
 </section>

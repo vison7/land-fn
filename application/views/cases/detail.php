@@ -49,7 +49,7 @@
 				<p><?php echo @$data->data[0]->lessons_learn?></p>
 
 				<h5>Contact Name:</h5>
-				<p><?php echo @$data->data[0]->contact_name?></p>
+				<p><?php echo processString(@$data->data[0]->contact_name)?></p>
 
 				<h5>Contact Email:</h5>
 				<p><?php echo @$data->data[0]->contact_email?></p>
@@ -57,11 +57,29 @@
 				<h5>Contact Organization:</h5>
 				<p><?php echo @$data->data[0]->contact_org?></p>
 
-				
-			<!-- <p class="seeall text-center m-3">
-				<a href="#">see all</a>
-			</p> -->
+				<?php if(!empty($data->data[0]->gallery)){?>
+				<div class="container mt-5">
+					<div class="row">
+						<?php 
+						foreach ($data->data[0]->gallery as $val) { 
+							$link = str_replace('//land-bn/','//localhost:8011/',$val);
+							$thumb= str_replace('//land-bn/','//localhost:8011/',$val);
+							?>
+						<div class="col">
+							<a href="<?php echo $link?>" target="_blank"><img class="img-fluid" src="<?php echo $thumb  ?>" /></a>
+						</div>
+						<?php } ?>
+					</div>
+				</div>
+				<?php }?>
 
 		</div>
 	</div>
 </section>
+
+<?php
+function processString($s){
+	return preg_replace('@((https?://)?([-\w]+\.[-\w\.]+)+\w(:\d+)?(/([-\w/_\.]*(\?\S+)?)?)*)@', '<a href="$1">$1</a>', $s);
+  }
+  
+?>
