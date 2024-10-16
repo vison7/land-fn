@@ -28,7 +28,7 @@
       <div class=" col-lg-4 col-md-6">
           <div class="card mb-5" style="cursor: pointer;">
             <div class="card-body" onclick="location.href='#submit-a-case';">
-              <h5 class="card-title">I’m looking for</h5>
+              <h5 class="card-title">I’m looking to</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">submit <br />a case</p>
               <!-- <a href="#" class="card-link">Card link</a> -->
@@ -43,7 +43,7 @@
       <div class=" col-lg-4 col-md-6">
           <div class="card" style="cursor: pointer;">
             <div class="card-body" onclick="location.href='#case-studies';">
-              <h5 class="card-title">I’m looking to</h5>
+              <h5 class="card-title">I’m looking for</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
               <p class="card-text">data & information</p>
               <!-- <a href="#" class="card-link">Card link</a> -->
